@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
           {[...Array(2)].map((_, setIndex) => (
             <div key={setIndex} className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 shrink-0">
               {testimonialsList.map(testimonial => (
-                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-gray-700 hover:border-brand-yellow/50 transition-all duration-300 hover:scale-105 w-[300px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] shrink-0">
+                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-gray-700 hover:border-brand-yellow/50 transition-all duration-500 hover:scale-[1.02] transform-gpu origin-center w-[300px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] shrink-0 mx-1">
                   <CardContent className="p-4 sm:p-6">
                     <div className="text-2xl sm:text-3xl text-brand-yellow mb-3 sm:mb-4">"</div>
                     <p className="text-sm sm:text-base text-brand-white/90 mb-4 sm:mb-6 leading-relaxed">
