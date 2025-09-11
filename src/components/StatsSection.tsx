@@ -122,7 +122,7 @@ const StatsSection = () => {
           <div className="absolute right-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-l from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
           
           <div className="flex animate-scroll-x gap-4 sm:gap-8 md:gap-12">
-            {[...Array(2)].map((_, setIndex) => (
+            {[...Array(3)].map((_, setIndex) => (
               <div key={setIndex} className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 shrink-0">
                 {logos.map((logo, index) => (
                    <div key={`${setIndex}-${index}`} className="flex items-center justify-center w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-16 sm:h-20 shrink-0">
