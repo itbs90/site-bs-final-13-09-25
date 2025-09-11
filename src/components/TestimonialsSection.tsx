@@ -102,7 +102,7 @@ const TestimonialsSection = () => {
         </h2>
       </div>
 
-      <div ref={cardsRef} className="opacity-0 relative w-full">
+      <div ref={cardsRef} className="opacity-0 relative w-full overflow-hidden px-4 sm:px-8 md:px-16 lg:px-[152px]">
         {/* Enhanced fade gradients on sides */}
         <div className="absolute left-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
         <div className="absolute right-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-l from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
