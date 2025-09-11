@@ -24,7 +24,7 @@ const HeroSection = () => {
   }, []);
 
   return <section 
-    className="relative min-h-screen flex items-center justify-center bg-brand-black overflow-hidden py-32"
+    className="relative min-h-screen flex items-center justify-center bg-brand-black overflow-hidden py-20"
   >
       <div className="absolute inset-0 bg-gradient-to-b from-brand-gray-900 to-brand-black opacity-40 py-0 px-0"></div>
       
@@ -35,7 +35,7 @@ const HeroSection = () => {
       <div className="absolute bottom-1/3 left-1/4 w-12 h-12 bg-brand-yellow rounded-full blur-xl opacity-25 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       <div className="absolute top-20 right-1/2 w-6 h-6 bg-brand-yellow rounded-full blur-lg opacity-35 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       
-      <div className="section-container text-center z-10 pt-32 py-24">
+      <div className="section-container text-center z-10 pt-16 py-16">
         <div className="mb-6">
           <span className="inline-block bg-brand-yellow/10 text-brand-yellow text-sm font-medium px-4 py-2 rounded-full border border-brand-yellow/20">
             Studio Criativo

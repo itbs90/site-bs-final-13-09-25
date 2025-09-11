@@ -103,16 +103,16 @@ const TestimonialsSection = () => {
       </div>
 
       <div ref={cardsRef} className="opacity-0 relative w-full">
-        {/* Enhanced fade gradients on sides - full width without margins */}
-        <div className="absolute left-0 top-0 w-8 sm:w-20 md:w-40 lg:w-60 xl:w-80 h-full bg-gradient-to-r from-brand-black via-brand-black/98 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 w-8 sm:w-20 md:w-40 lg:w-60 xl:w-80 h-full bg-gradient-to-l from-brand-black via-brand-black/98 to-transparent z-10 pointer-events-none"></div>
+        {/* Enhanced fade gradients on sides */}
+        <div className="absolute left-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-l from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
         
         {/* Scrolling testimonials */}
         <div className="flex animate-scroll-x gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {[...Array(2)].map((_, setIndex) => (
             <div key={setIndex} className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 shrink-0">
               {testimonialsList.map(testimonial => (
-                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-gray-700 hover:border-brand-yellow/50 transition-all duration-300 hover:scale-105 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] shrink-0">
+                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-gray-700 hover:border-brand-yellow/50 transition-all duration-300 hover:scale-105 w-[260px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] shrink-0">
                   <CardContent className="p-4 sm:p-6">
                     <div className="text-2xl sm:text-3xl text-brand-yellow mb-3 sm:mb-4">"</div>
                     <p className="text-sm sm:text-base text-brand-white/90 mb-4 sm:mb-6 leading-relaxed">
