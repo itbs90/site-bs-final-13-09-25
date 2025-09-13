@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import ImageWithFallback from '@/components/ImageWithFallback';
 import { 
   Carousel, 
   CarouselContent, 
@@ -127,12 +128,13 @@ const ProjectsPreviewSection = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {projectsList.map((project) => (
                   <CarouselItem key={project.id} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/2">
-                    <Card className="group bg-transparent border-brand-gray-800 hover:border-brand-yellow/50 transition-all duration-300 overflow-hidden h-full">
+                    <Card className="bg-transparent border-brand-gray-800 transition-colors duration-300 overflow-hidden h-full">
                       <div className="relative overflow-hidden aspect-square">
-                        <img 
+                        <ImageWithFallback
                           src={project.imageUrl} 
                           alt={project.title} 
-                          className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" 
+                          className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 via-transparent to-transparent"></div>
                         <div className="absolute top-4 right-4">
@@ -141,7 +143,7 @@ const ProjectsPreviewSection = () => {
                           </span>
                         </div>
                         <div className="absolute bottom-6 left-6 right-6">
-                          <h3 className="text-xl font-bold text-brand-white mb-2 group-hover:text-brand-yellow transition-colors">
+                          <h3 className="text-xl font-bold text-brand-white mb-2">
                             {project.title}
                           </h3>
                           <p className="text-brand-white/80 text-sm mb-4 line-clamp-2">

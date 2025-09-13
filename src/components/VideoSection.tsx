@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 const VideoSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -9,10 +11,17 @@ const VideoSection = () => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            setShouldLoadVideo(true);
+            // Start playing video when visible
+            if (videoRef.current) {
+              videoRef.current.play().catch(() => {
+                // Silent fail for autoplay restrictions
+              });
+            }
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.1, rootMargin: '100px' }
     );
 
     if (sectionRef.current) {
@@ -29,9 +38,20 @@ const VideoSection = () => {
   return <section ref={sectionRef} className="relative h-screen overflow-hidden">
       {/* Background video */}
       <div className="absolute inset-0 w-full h-full">
-        <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-          <source src="https://brandingsingular.com/wp-content/uploads/2025/09/video-bs.mp4" type="video/mp4" />
-        </video>
+        {shouldLoadVideo ? (
+          <video 
+            ref={videoRef}
+            muted 
+            loop 
+            playsInline 
+            preload="none"
+            className="w-full h-full object-cover"
+          >
+            <source src="https://brandingsingular.com/wp-content/uploads/2025/09/video-bs.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <div className="w-full h-full bg-brand-black" />
+        )}
         
         {/* Black overlay */}
         <div className="absolute inset-0 bg-black/60"></div>

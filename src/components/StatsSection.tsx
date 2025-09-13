@@ -99,20 +99,20 @@ const StatsSection = () => {
         </h2>
 
         <div ref={statsRef} className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 opacity-0">
-          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl transform transition-all duration-500 hover:scale-105 group">
-            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow group-hover:scale-110 transition-transform duration-300" data-target="156">0</div>
+          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl">
+            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow transition-transform duration-300" data-target="156">0</div>
             <div className="text-lg font-medium text-brand-white mb-1">Projetos Criados</div>
             <div className="text-sm text-brand-white/70">Marcas que ganharam clareza e resultados.</div>
           </div>
           
-          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl transform transition-all duration-500 hover:scale-105 group">
-            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow group-hover:scale-110 transition-transform duration-300" data-target="13">0</div>
+          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl">
+            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow transition-transform duration-300" data-target="13">0</div>
             <div className="text-lg font-medium text-brand-white mb-1">Anos de Experiência</div>
             <div className="text-sm text-brand-white/70">Histórias construídas com estratégia e criatividade.</div>
           </div>
           
-          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl transform transition-all duration-500 hover:scale-105 group">
-            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow group-hover:scale-110 transition-transform duration-300" data-target="6">0</div>
+          <div className="text-center p-4 sm:p-6 md:p-8 liquid-glass-card rounded-2xl">
+            <div className="counter-value text-5xl font-bold mb-2 text-brand-yellow transition-transform duration-300" data-target="6">0</div>
             <div className="text-lg font-medium text-brand-white mb-1">Países atendidos</div>
             <div className="text-sm text-brand-white/70">Presença internacional com soluções personalizadas.</div>
           </div>
@@ -133,7 +133,7 @@ const StatsSection = () => {
                       <ImageWithFallback 
                         src={logo.icon} 
                         alt={logo.name}
-                        className="h-8 sm:h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-all duration-300 filter brightness-0 invert hover:scale-110 max-w-full object-contain"
+                        className="h-8 sm:h-10 md:h-12 w-auto opacity-60 transition-opacity duration-300 filter brightness-0 invert max-w-full object-contain"
                         loading="lazy"
                       />
                   </div>
@@ -151,7 +151,7 @@ const StatsSection = () => {
                       <ImageWithFallback 
                         src={logo.icon} 
                         alt={logo.name}
-                        className="h-8 sm:h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-all duration-300 filter brightness-0 invert hover:scale-110 max-w-full object-contain"
+                        className="h-8 sm:h-10 md:h-12 w-auto opacity-60 transition-opacity duration-300 filter brightness-0 invert max-w-full object-contain"
                         loading="lazy"
                       />
                   </div>

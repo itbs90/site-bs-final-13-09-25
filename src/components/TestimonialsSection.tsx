@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import ImageWithFallback from '@/components/ImageWithFallback';
 import { Card, CardContent } from '@/components/ui/card';
 import tamara from '@/assets/tamara-carvalho.png';
 import lucas from '@/assets/lucas-brawlyo.png';
@@ -8,7 +9,6 @@ import keullerBoy from '@/assets/keuller-boy.jpg';
 import juniorCaldeira from '@/assets/junior-caldeira.jpg';
 import lucasNew from '@/assets/lucas-brawlyo-new.png';
 import ImageModal from '@/components/ImageModal';
-import ImageWithFallback from '@/components/ImageWithFallback';
  
 const testimonialsList = [{
   id: 1,
@@ -112,7 +112,7 @@ const TestimonialsSection = () => {
           {[...Array(2)].map((_, setIndex) => (
             <div key={setIndex} className="flex gap-3 sm:gap-4 md:gap-6 lg:gap-8 shrink-0">
               {testimonialsList.map(testimonial => (
-                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-gray-700 hover:border-brand-yellow/50 transition-all duration-500 transform-gpu origin-center w-[280px] sm:w-[300px] md:w-[340px] lg:w-[380px] xl:w-[420px] shrink-0 mx-1">
+                <Card key={`${setIndex}-${testimonial.id}`} className="bg-gradient-to-b from-brand-gray-900/50 to-brand-gray-800/20 border border-brand-yellow/30 w-[280px] sm:w-[300px] md:w-[340px] lg:w-[380px] xl:w-[420px] shrink-0 mx-1">
                   <CardContent className="p-4 sm:p-6">
                     <div className="text-2xl sm:text-3xl text-brand-yellow mb-3 sm:mb-4">"</div>
                     <p className="text-sm sm:text-base text-brand-white/90 mb-4 sm:mb-6 leading-relaxed">
