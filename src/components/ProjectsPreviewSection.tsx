@@ -45,14 +45,14 @@ const projectsList = [{
   description: 'Plataforma de delivery que conecta restaurantes e consumidores com experiência única.',
   category: 'Tecnologia',
   date: '2024',
-  imageUrl: foodwayProject
+  imageUrl: 'https://brandingsingular.com/wp-content/uploads/2025/09/case-foodway-02.png'
 }, {
   id: 5,
   title: 'AWI',
   description: 'Curso profissionalizante em gestão que capacita líderes para o futuro.',
   category: 'Educação',
   date: '2024',
-  imageUrl: awiProject
+  imageUrl: 'https://brandingsingular.com/wp-content/uploads/2025/09/case-awi-03.png'
 }];
 const ProjectsPreviewSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
