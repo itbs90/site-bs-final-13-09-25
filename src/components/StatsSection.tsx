@@ -14,20 +14,23 @@ import awiserviceLogo from '@/assets/logos/awiservice.png';
 import arcoprimeLogo from '@/assets/logos/arcoprime.png';
 import ImageWithFallback from '@/components/ImageWithFallback';
 
-const logos = [
+const firstRowLogos = [
   { name: 'Start Futevôlei', icon: startLogo },
   { name: 'Sebrae', icon: sebraeLogo },
   { name: 'Psi do Futuro', icon: psidofuturoLogo },
-  { name: 'Platform Builders', icon: platformbuildersLogo },
   { name: 'Nutrien', icon: nutrienLogo },
-  { name: 'Neila Cristina', icon: neilacristinaLogo },
+  { name: 'Platform Builders', icon: platformbuildersLogo },
   { name: 'Itone', icon: itoneLogo },
-  { name: 'Isabela Torres', icon: isabelatorresLogo },
-  { name: 'Galore', icon: galoreLogo },
+  { name: 'Galore', icon: galoreLogo }
+];
+
+const secondRowLogos = [
   { name: 'Foodway', icon: foodwayLogo },
-  { name: 'Cobi', icon: cobiLogo },
   { name: 'AWI Service', icon: awiserviceLogo },
-  { name: 'Arco Prime', icon: arcoprimeLogo }
+  { name: 'Arco Prime', icon: arcoprimeLogo },
+  { name: 'Cobi', icon: cobiLogo },
+  { name: 'Isabela Torres', icon: isabelatorresLogo },
+  { name: 'Neila Cristina', icon: neilacristinaLogo }
 ];
 const StatsSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -116,16 +119,35 @@ const StatsSection = () => {
         </div>
 
         {/* Logos section */}
-        <div ref={logosRef} className="opacity-0 relative w-full mt-16 overflow-hidden">
+        <div ref={logosRef} className="opacity-0 relative w-full mt-16 overflow-hidden space-y-4">
           {/* Enhanced fade gradients on sides */}
           <div className="absolute left-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-r from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
           <div className="absolute right-0 top-0 w-16 sm:w-32 md:w-48 lg:w-64 h-full bg-gradient-to-l from-brand-black via-brand-black/90 to-transparent z-10 pointer-events-none"></div>
           
+          {/* First row - moving right to left */}
+          <div className="flex animate-scroll-x-reverse gap-4 sm:gap-8 md:gap-12">
+            {[...Array(3)].map((_, setIndex) => (
+              <div key={setIndex} className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 shrink-0">
+                {firstRowLogos.map((logo, index) => (
+                   <div key={`first-${setIndex}-${index}`} className="flex items-center justify-center w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-16 sm:h-20 shrink-0">
+                      <ImageWithFallback 
+                        src={logo.icon} 
+                        alt={logo.name}
+                        className="h-8 sm:h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-all duration-300 filter brightness-0 invert hover:scale-110 max-w-full object-contain"
+                        loading="lazy"
+                      />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* Second row - moving left to right */}
           <div className="flex animate-scroll-x gap-4 sm:gap-8 md:gap-12">
             {[...Array(3)].map((_, setIndex) => (
               <div key={setIndex} className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12 shrink-0">
-                {logos.map((logo, index) => (
-                   <div key={`${setIndex}-${index}`} className="flex items-center justify-center w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-16 sm:h-20 shrink-0">
+                {secondRowLogos.map((logo, index) => (
+                   <div key={`second-${setIndex}-${index}`} className="flex items-center justify-center w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56 h-16 sm:h-20 shrink-0">
                       <ImageWithFallback 
                         src={logo.icon} 
                         alt={logo.name}
