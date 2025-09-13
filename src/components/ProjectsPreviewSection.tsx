@@ -15,6 +15,8 @@ import Autoplay from 'embla-carousel-autoplay';
 import arcoprimeProject from '@/assets/projects/arcoprime-01.png';
 import futevoleiProject from '@/assets/projects/start-02.png';
 import psiFuturoProject from '@/assets/projects/psidofuturo-01.png';
+import foodwayProject from '@/assets/projects/foodway-01.png';
+import awiProject from '@/assets/projects/awi-01.png';
 
 const projectsList = [{
   id: 1,
@@ -25,7 +27,7 @@ const projectsList = [{
   imageUrl: arcoprimeProject
 }, {
   id: 3,
-  title: 'Start',
+  title: 'Start Futevôlei',
   description: 'Escola de futevôlei que inspira superação e comunidade no esporte.',
   category: 'Esportes',
   date: '2024',
@@ -37,6 +39,20 @@ const projectsList = [{
   category: 'Saúde Mental',
   date: '2023',
   imageUrl: psiFuturoProject
+}, {
+  id: 4,
+  title: 'Foodway',
+  description: 'Plataforma de delivery que conecta restaurantes e consumidores com experiência única.',
+  category: 'Tecnologia',
+  date: '2024',
+  imageUrl: foodwayProject
+}, {
+  id: 5,
+  title: 'AWI',
+  description: 'Curso profissionalizante em gestão que capacita líderes para o futuro.',
+  category: 'Educação',
+  date: '2024',
+  imageUrl: awiProject
 }];
 const ProjectsPreviewSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
